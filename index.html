@@ -4,6 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bragg Group</title>
 
     <!-- google fonts -->
@@ -15,6 +16,8 @@
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./resources/css/style.css">
 
   </head>
@@ -28,22 +31,54 @@
             </span>
           </a>
           <ul class="navbar navbar-right navbar-nav">
-            <li class="active"><a href="#bragg">About</a></li>
-            <li class=""><a href="#tenants">Our Brand</a></li>
+            <li class="active"><a href="#splash"><i class="fa fa-home"></i></a></li>
+            <li class=""><a href="#bragg">About Me</a></li>
             <li class=""><a href="#book-now">Book Now</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <section id="splash">
-      <div class="jumbotron jumbotron-fun">
-        <div class="container">
-          <h1 class="splash-text">Have Fun</h1>
-          <p class="jumbo-subhead">Travel the world with us all expenses paid.</p>
-          <div class="jumbo-text-box">
-            <span class="jumbo-text"><i class="fa fa-piggy-bank"></i>At the alliance you set your own schedule. You work when you want. Spend time with your family and play when you want.</span>
+      <div class="carousel bragg-group-carousel">
+        <div class="jumbotron jumbotron-fun">
+          <div class="jumbo-content">
+            <h1 class="splash-text">Have Fun</h1>
+            <h4 class="jumbo-subhead">Travel the world with us all expenses paid.</h4>
+            <div class="jumbo-text-box">
+              <span class="jumbo-text">With The Alliance, you set your own schedule. You work when you want. Spend time with your family and play when you want.</span>
+            </div>
           </div>
-          <!-- <button type="button" class="btn btn-primary btn-lg">Book Appointment</button> -->
+        </div>
+        <div class="jumbotron jumbotron-money">
+          <div class="jumbo-content">
+            <h1 class="splash-text">Make Money</h1>
+            <h4 class="jumbo-subhead">Enjoy financial freedom without the J-O-B limits.</h4>
+            <div class="jumbo-text-box">
+              <span class="jumbo-text"><i class="fa fa-suitcase"></i></span>
+              <span class="jumbo-text">6-figure income</span>
+            </div>
+            <div class="jumbo-text-box">
+              <span class="jumbo-text"><i class="fa fa-suitcase"></i></span>
+              <span class="jumbo-text">bonuses</span>
+            </div>
+            <div class="jumbo-text-box">
+              <span class="jumbo-text"><i class="fa fa-suitcase"></i></span>
+              <span class="jumbo-text">trips</span>
+            </div>
+            <div class="jumbo-text-box">
+              <span class="jumbo-text"><i class="fa fa-suitcase"></i></span>
+              <span class="jumbo-text">contests</span>
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron jumbotron-difference">
+          <div class="jumbo-content">
+            <h1 class="splash-text">Make a Difference</h1>
+            <h4 class="jumbo-subhead">Change lives from your local community to the world.</h4>
+            <div class="jumbo-text-box">
+              <span class="jumbo-text">(2017) Volunteers from The Alliance helped prepare more than 114,000 meals for Syrian refugees in Iraq.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -58,5 +93,14 @@
     </section>
     <footer>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+      </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+    </script>
+    <script type="text/javascript" src="./resources/js/main.js"></script>
   </body>
 </html>

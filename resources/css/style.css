@@ -33,6 +33,12 @@ h3 {
   font-weight:bold;
 }
 
+/*fontawesome overrides*/
+.fa {
+  margin-right:.4em;
+}
+
+
 /*--------------*/
 /*navbar styling*/
 /*--------------*/
@@ -48,7 +54,7 @@ h3 {
 
 .navbar-nav li {
   line-height:50px;
-  padding-left:1rem;
+  padding-right:1rem;
 }
 
 .navbar-brand {
@@ -68,11 +74,21 @@ h3 {
   background-color:inherit;
 }
 
+/*override styling for navbar*/
 @media only screen and (min-width: 768px) {
   .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin:auto;
     margin-left:.5rem;
   }
+}
+
+/*mobile styling for navbar*/
+@media only screen and (max-width:768px) {
+  .navbar ul {
+    display:flex;
+    padding-left:1rem;
+  }
+
 }
 
 /*-----------------*/
@@ -82,18 +98,17 @@ h3 {
   position:relative;
   top:50px;
   height:44rem;
-  text-align:left;
-
-  font-family:"Anton", sans-serif;
   background-size:cover;
   background-position:center;
+  text-align:left;
   color:rgba(255,255,255,.96);
-  padding-top:4%;
 }
 
 .jumbotron h1 {
+  font-family:"Anton", sans-serif;
   font-weight:bold;
   letter-spacing:.3rem;
+  margin-top:4%;
   margin-bottom:2.5rem;
   text-shadow:-1px -1px 0 #000,
               1px -1px 0 #000,
@@ -108,6 +123,7 @@ h3 {
 
 .jumbo-subhead {
   letter-spacing:.1rem;
+  font-weight:bold;
   text-shadow:-1px -1px 0 #000,
               1px -1px 0 #000,
               -1px 1px 0 #000,
@@ -117,41 +133,118 @@ h3 {
 
 .jumbotron-fun .jumbo-text-box {
   max-width: 90%;
+  display:flex;
 }
+
+.jumbotron-money .jumbo-text-box {
+  max-width: 50%;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.jumbotron-difference .jumbo-text-box {
+  max-width: 90%;
+  display:flex;
+}
+
 
 .jumbo-text {
   font-family:"Josefin Slab", serif;
   font-weight:800;
+  line-height:1.2;
   text-shadow:-1px -1px 0 #000,
               1px -1px 0 #000,
               -1px 1px 0 #000,
               1px 1px 0 #000,
-              -1px 1px 2px #131313;
+              -1px 1px 4px rgba(19,19,19,.7);
 }
 
 .jumbotron-fun {
-  /*background-image:url("../images/freestock_18436897.jpg");*/
-  background-image:url("../images/riding-a-pedal-boat-1463161083aTh.jpg");
-  background-size:cover;
-  background-position:center;
-  padding-left:50%;
+  /*background-image:url("../images/at5.jpg");*/
+  background-image:url("../images/IMG_0078-X3.jpg");
 }
 
-.jumbotron .container {
+.jumbotron-money {
+  background-image:url("../images/new-home-construction-1500992515AmY.jpg");
+}
+
+.jumbotron-difference {
+  background-image:url("../images/IMG_2588.jpg");
+}
+
+.jumbo-content {
   margin:auto;
+  width:auto;
+  padding:0 1rem 1rem 1rem;
+  background: linear-gradient(to right, rgba(22,22,22,.25) , rgba(255,255,255,0));
 }
 
+.jumbotron-fun .jumbo-content {
+  margin-left:56%;
+}
+
+.jumbotron-money .jumbo-content {
+  margin-left:1%;
+}
+
+.jumbotron-difference .jumbo-content {
+  margin-left:48%
+}
+
+.jumbotron-money .jumbo-subhead {
+  max-width:60%;
+}
+
+/*media selctor for jumbotron overrides*/
 @media only screen and (min-width: 768px) {
-  .jumbotron .h1, .jumbotron h1 {
+  .jumbotron h1 {
     font-size:6rem;
   }
 
-  .jumbotron p {
-    font-size:2.5rem;
+  .jumbotron h4 {
+    font-size:3.4rem;
   }
 
   .jumbotron span {
     font-size:2.2rem;
   }
+}
 
+/*tablet styling for jumbotron*/
+@media only screen and (max-width:1099px) {
+
+  .jumbotron h1 {
+    font-size:4rem;
+  }
+
+  .jumbotron h4 {
+    font-size:2.5rem;
+  }
+
+  .jumbotron span {
+    font-size: 1.8rem;
+  }
+}
+
+/*mid-size mobile styling for jumbotron*/
+@media only screen and (max-width: 768px) {
+  .jumbotron {
+    padding-top:67px;
+  }
+
+  .jumbotron h1 {
+    font-size:2.5rem;
+  }
+
+  .jumbotron h4 {
+    font-size:2rem;
+  }
+
+  .jumbotron span {
+    font-size:1.6rem;
+  }
+
+  .jumbotron-fun .jumbo-content {
+    margin-left:40%;
+  }
 }
