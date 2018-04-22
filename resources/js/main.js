@@ -1,4 +1,14 @@
+$.fn.scrollView = function () {
+  var navHeight = $("#bg-navbar").height();
+  return this.each(function () {
+    $('html, body').animate({
+      scrollTop: ($(this).offset().top - navHeight)
+    }, 300);
+  });
+}
+
 $(document).ready(function(){
+  // automation for carousel
   $('.bragg-group-carousel').slick({
     accessibility:false,
     arrows:false,
@@ -10,17 +20,40 @@ $(document).ready(function(){
     swipe:false,
     touchMove:false
   });
+
+  // size images and videos on document ready
   sizeIntroVid();
   sizeAboutVid();
   sizeNAAInfo();
   sizeInsuranceRow();
+
+  // size images and videos on window resize
   $(window).resize(function(){
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
     sizeInsuranceRow();
   });
+
+  $('.bragg-nav').click(function(){
+    $('#bragg').scrollView();
+  });
+
+  $('.get-inspired-nav').click(function(){
+    $('#get-inspired').scrollView();
+  });
+
+  $('.naa-about-nav').click(function(){
+    $('#naa-about').scrollView();
+  });
+
+  $('.book-now-nav').click(function(){
+    $('#book-now').scrollView();
+  });
+
 });
+
+
 
 // set the size of the YouTube video
 function sizeIntroVid() {
