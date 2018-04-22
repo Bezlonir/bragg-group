@@ -67,6 +67,6 @@ function sizeNAAInfo() {
 
 function sizeInsuranceRow() {
   var RowWidth = $('.insurance-row').width();
-  var RowHeight = Math.floor(RowWidth / 8);
+  var RowHeight = Math.floor(RowWidth / 6);
   $('.insurance-row').css('height', RowHeight);
 }

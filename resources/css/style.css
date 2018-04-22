@@ -403,6 +403,10 @@ h3 {
   align-items:flex-end;
 }
 
+.insurance-row .col-xs-2 {
+  width:20%;
+}
+
 /*footer styling*/
 footer {
   height:auto;
