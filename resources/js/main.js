@@ -12,9 +12,11 @@ $(document).ready(function(){
   });
   sizeIntroVid();
   sizeAboutVid();
+  sizeNAAInfo();
   $(window).resize(function(){
     sizeIntroVid();
     sizeAboutVid();
+    sizeNAAInfo();
   });
 });
 
@@ -51,3 +53,10 @@ function sizeAboutVid() {
       'allowfullscreen></iframe>';
   $('.about-video').html(aboutHTML);
 };
+
+// size the NAA leads info picture
+function sizeNAAInfo() {
+  var NAAwidth = $('.naa-pic').width();
+  var NAAheight = Math.floor(NAAwidth * .725);
+  $('.naa-pic').css('height', NAAheight);
+}

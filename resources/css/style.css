@@ -327,13 +327,17 @@ h3 {
 }
 
 /*videos section styling*/
-.get-inspired h2 {
+#get-inspired {
+  margin-bottom:4rem;
+}
+
+#get-inspired h2 {
   font-size:2.8rem;
   opacity:.9;
 }
 
 .highlight {
-  width:40%;
+  width:45%;
   height:auto;
   background: linear-gradient(to right, rgba(22,22,22,.15) , rgba(255,255,255,0));
 }
@@ -341,7 +345,6 @@ h3 {
 .intro-video {
   height:auto;
   margin-top:1rem;
-  margin-bottom:4rem;
 }
 
 .about-video {
@@ -362,5 +365,12 @@ h3 {
 
 /*naa leads about section styling*/
 .naa-pic {
-  background-image:url("../images/naa-leads-about.png")
+  background-image:url("../images/naa-leads-about.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  margin-bottom:2rem;
+  height:50rem;
+  width:calc(100% - 3rem);
+  margin-left:1.5rem;
+  margin-bottom:4rem;
 }
