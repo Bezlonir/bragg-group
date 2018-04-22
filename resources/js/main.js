@@ -25,7 +25,9 @@ function sizeIntroVid() {
   $('.intro-video').val('');
   var introWidth = $('.intro-column').width();
   introWidth = Math.floor(introWidth* .95);
-  var introHeight = Math.floor(introWidth * 0.6015625);
+  var vidRatio = 2/3;
+  // 0.6015625
+  var introHeight = Math.floor(introWidth * 0.5625);
   var introHTML =
   '<iframe ' +
       'width="'+ introWidth +'"' +
@@ -42,7 +44,7 @@ function sizeAboutVid() {
   $('.about-video').val('');
   var aboutWidth = $('.about-column').width();
   aboutWidth = Math.floor(aboutWidth * .95);
-  var aboutHeight = Math.floor(aboutWidth * 0.6015625);
+  var aboutHeight = Math.floor(aboutWidth * 0.5625);
   var aboutHTML =
   '<iframe ' +
       'width="'+ aboutWidth +'"' +
