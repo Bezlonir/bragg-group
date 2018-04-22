@@ -13,10 +13,12 @@ $(document).ready(function(){
   sizeIntroVid();
   sizeAboutVid();
   sizeNAAInfo();
+  sizeInsuranceRow();
   $(window).resize(function(){
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
+    sizeInsuranceRow();
   });
 });
 
@@ -61,4 +63,10 @@ function sizeNAAInfo() {
   var NAAwidth = $('.naa-pic').width();
   var NAAheight = Math.floor(NAAwidth * .725);
   $('.naa-pic').css('height', NAAheight);
+}
+
+function sizeInsuranceRow() {
+  var RowWidth = $('.insurance-row').width();
+  var RowHeight = Math.floor(RowWidth / 8);
+  $('.insurance-row').css('height', RowHeight);
 }

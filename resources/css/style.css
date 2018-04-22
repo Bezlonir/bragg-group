@@ -114,7 +114,7 @@ h3 {
 .jumbotron {
   position:relative;
   top:50px;
-  height:44rem;
+  height:54rem;
   background-size:cover;
   background-position:center;
   text-align:left;
@@ -182,7 +182,8 @@ h3 {
 }
 
 .jumbotron-money {
-  background-image:url("../images/new-home-construction-1500992515AmY.jpg");
+  background-image:url("../images/new-home-construction-151594814293R2.jpg");
+  background-position:right bottom;
 }
 
 .jumbotron-difference {
@@ -239,7 +240,7 @@ h3 {
   }
 
   .jumbotron h4 {
-    font-size:2.5rem;
+    font-size:2.3rem;
   }
 
   .jumbotron span {
@@ -250,6 +251,7 @@ h3 {
 /*mid-size mobile styling for jumbotron*/
 @media only screen and (max-width: 768px) {
   .jumbotron {
+    height:44rem;
     padding-top:67px;
   }
 
@@ -364,6 +366,10 @@ h3 {
 }
 
 /*naa leads about section styling*/
+#naa-about {
+  margin-bottom:4rem;
+}
+
 .naa-pic {
   background-image:url("../images/naa-leads-about.png");
   background-size:contain;
@@ -372,5 +378,44 @@ h3 {
   height:50rem;
   width:calc(100% - 3rem);
   margin-left:1.5rem;
+  margin-bottom:4rem;
+}
+
+#naa-about h2 {
+  margin-left:1.5rem;
+}
+
+.insurance-img {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.insurance-img img {
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.insurance-row {
+  height:10rem;
+  display:flex;
+  align-items:flex-end;
+}
+
+/*footer styling*/
+footer {
+  height:auto;
+  background: #c6c6ce;
+}
+
+footer .container-fluid {
+  display:flex;
+  justify-content:center;
+  align-items:space-around;
+}
+
+footer a {
+  margin-top:4rem;
   margin-bottom:4rem;
 }
