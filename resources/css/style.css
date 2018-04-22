@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6  {
 }
 
 h2 {
-  font-size:1.7rem;
+  font-size:2.2rem;
   font-weight:bold;
 }
 
@@ -316,10 +316,15 @@ h3 {
   font-family:"Josefin Slab", serif;
   font-weight:600;
   font-size:1.6rem;
-  margin-top:1.5rem;
+  margin-top:1.8rem;
   max-width:80%;
 }
 
+.upped-bold {
+  font-weight:800;
+  font-size:1.2em;
+  line-height:.83;
+}
 
 /*videos section styling*/
 .get-inspired h2 {
@@ -344,42 +349,18 @@ h3 {
   margin-top:1rem;
 }
 
-.video-xs {
-  display:none;
-}
-
-.video-sm {
-  display:none;
-}
-
 @media only screen and (max-width:1099px) {
-  .video-xs {
-    display:none;
-  }
 
-  .video-sm {
-    display:block;
-  }
-
-  .video-lg{
-    display:none;
-  }
 }
 
 @media only screen and (max-width:768px) {
-  .video-xs {
-    display:block;
-  }
-
-  .video-sm {
-    display:none;
-  }
-
-  .video-lg {
-    display:none;
-  }
 
   .intro-video {
     margin-bottom:1.8rem;
   }
+}
+
+/*naa leads about section styling*/
+.naa-pic {
+  background-image:url("../images/naa-leads-about.png")
 }
