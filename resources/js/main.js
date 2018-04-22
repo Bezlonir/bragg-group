@@ -2,7 +2,7 @@ $.fn.scrollView = function () {
   var navHeight = $("#bg-navbar").height();
   return this.each(function () {
     $('html, body').animate({
-      scrollTop: ($(this).offset().top - navHeight)
+      scrollTop: ($(this).offset().top - navHeight + 20)
     }, 300);
   });
 }
