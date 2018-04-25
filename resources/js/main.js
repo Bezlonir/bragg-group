@@ -24,10 +24,13 @@ $(document).ready(function () {
   });
 
   // size images and videos on document ready
-  sizeIntroVid();
-  sizeAboutVid();
-  sizeNAAInfo();
-  sizeInsuranceRow();
+  $(document).addEventListener("DomContentLoaded", function(){
+    sizeIntroVid();
+    sizeAboutVid();
+    sizeNAAInfo();
+    sizeInsuranceRow();
+
+  });
 
   // size images and videos on window resize
   $(window).resize(function () {
