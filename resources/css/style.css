@@ -14,13 +14,21 @@ html {
   height:auto;
   display:block;
   opacity:0.5;
+  -webkit-transition: opacity 500ms ease-in 70ms,
+            -webkit-transform 500ms ease-in 70ms;
+  transition: opacity 500ms ease-in 70ms,
+            -webkit-transform 500ms ease-in 70ms;
   transition: opacity 500ms ease-in 70ms,
             transform 500ms ease-in 70ms;
+  transition: opacity 500ms ease-in 70ms,
+            transform 500ms ease-in 70ms,
+            -webkit-transform 500ms ease-in 70ms;
 }
 
 .image-container img:hover {
   opacity:1;
-  transform:scale(1.3);
+  -webkit-transform:scale(1.3);
+          transform:scale(1.3);
 }
 
 .video-container {
@@ -98,6 +106,8 @@ h3 {
 /*mobile styling for navbar*/
 @media only screen and (max-width:768px) {
   .navbar ul {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
     padding-left:1rem;
   }
@@ -150,17 +160,24 @@ h3 {
 
 .jumbotron-fun .jumbo-text-box {
   max-width: 90%;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
 }
 
 .jumbotron-money .jumbo-text-box {
   max-width: 50%;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
 }
 
 .jumbotron-difference .jumbo-text-box {
   max-width: 90%;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
 }
 
@@ -194,6 +211,7 @@ h3 {
   margin:auto;
   width:auto;
   padding:0 1rem 1rem 1rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(22,22,22,.25)) , to(rgba(255,255,255,0)));
   background: linear-gradient(to right, rgba(22,22,22,.25) , rgba(255,255,255,0));
 }
 
@@ -301,14 +319,24 @@ h3 {
   font-size:2.5rem;
   padding:1rem;
   font-weight:800;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  align-items:center;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
 }
 
 .pull-quote i {
-  align-self:center;
+  -ms-flex-item-align:center;
+      align-self:center;
   margin-left:auto;
   margin-right:auto;
   font-size:2rem;
@@ -342,6 +370,7 @@ h3 {
 .highlight {
   width:45%;
   height:auto;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(22,22,22,.15)) , to(rgba(255,255,255,0)));
   background: linear-gradient(to right, rgba(22,22,22,.15) , rgba(255,255,255,0));
 }
 
@@ -402,8 +431,12 @@ h3 {
 
 .insurance-row {
   height:10rem;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  align-items:flex-end;
+  -webkit-box-align:end;
+      -ms-flex-align:end;
+          align-items:flex-end;
 }
 
 .insurance-row .col-xs-2 {
@@ -417,9 +450,15 @@ footer {
 }
 
 footer .container-fluid {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content:center;
-  align-items:space-around;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  -webkit-box-align:space-around;
+      -ms-flex-align:space-around;
+          align-items:space-around;
 }
 
 footer a {
@@ -433,13 +472,16 @@ footer .btn-group-lg>.btn, .btn-lg {
 
 .btn {
   background-color:#399bd1;
-  box-shadow:0 0 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow:0 0 3px rgba(0,0,0,0.5);
+          box-shadow:0 0 3px rgba(0,0,0,0.5);
 }
 
 .btn:hover {
-  box-shadow:0 0 12px rgba(0,0,0,0.9);
+  -webkit-box-shadow:0 0 12px rgba(0,0,0,0.9);
+          box-shadow:0 0 12px rgba(0,0,0,0.9);
 }
 
 .btn:active {
-  box-shadow:0 0 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow:0 0 3px rgba(0,0,0,0.5);
+          box-shadow:0 0 3px rgba(0,0,0,0.5);
 }

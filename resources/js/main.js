@@ -1,24 +1,26 @@
+'use strict';
+
 $.fn.scrollView = function () {
   var navHeight = $("#bg-navbar").height();
   return this.each(function () {
     $('html, body').animate({
-      scrollTop: ($(this).offset().top - navHeight + 20)
+      scrollTop: $(this).offset().top - navHeight + 20
     }, 300);
   });
-}
+};
 
-$(document).ready(function(){
+$(document).ready(function () {
   // automation for carousel
   $('.bragg-group-carousel').slick({
-    accessibility:false,
-    arrows:false,
+    accessibility: false,
+    arrows: false,
     autoplay: true,
-    autoplaySpeed:6000,
-    draggable:false,
-    pauseOnFocus:false,
-    pauseOnHover:false,
-    swipe:false,
-    touchMove:false
+    autoplaySpeed: 6000,
+    draggable: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    swipe: false,
+    touchMove: false
   });
 
   // size images and videos on document ready
@@ -28,49 +30,39 @@ $(document).ready(function(){
   sizeInsuranceRow();
 
   // size images and videos on window resize
-  $(window).resize(function(){
+  $(window).resize(function () {
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
     sizeInsuranceRow();
   });
 
-  $('.bragg-nav').click(function(){
+  $('.bragg-nav').click(function () {
     $('#bragg').scrollView();
   });
 
-  $('.get-inspired-nav').click(function(){
+  $('.get-inspired-nav').click(function () {
     $('#get-inspired').scrollView();
   });
 
-  $('.naa-about-nav').click(function(){
+  $('.naa-about-nav').click(function () {
     $('#naa-about').scrollView();
   });
 
-  $('.book-now-nav').click(function(){
+  $('.book-now-nav').click(function () {
     $('#book-now').scrollView();
   });
-
 });
-
-
 
 // set the size of the YouTube video
 function sizeIntroVid() {
   $('.intro-video').val('');
   var introWidth = $('.intro-column').width();
-  introWidth = Math.floor(introWidth* .95);
-  var vidRatio = 2/3;
+  introWidth = Math.floor(introWidth * .95);
+  var vidRatio = 2 / 3;
   // 0.6015625
   var introHeight = Math.floor(introWidth * 0.5625);
-  var introHTML =
-  '<iframe ' +
-      'width="'+ introWidth +'"' +
-      'height="'+ introHeight +'"' +
-      'src="https://www.youtube.com/embed/MEX_SrCI4VA"' +
-      'frameborder="0"' +
-      'allow="autoplay; encrypted-media"' +
-      'allowfullscreen></iframe>';
+  var introHTML = '<iframe ' + 'width="' + introWidth + '"' + 'height="' + introHeight + '"' + 'src="https://www.youtube.com/embed/MEX_SrCI4VA"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.intro-video').html(introHTML);
 };
 
@@ -80,14 +72,7 @@ function sizeAboutVid() {
   var aboutWidth = $('.about-column').width();
   aboutWidth = Math.floor(aboutWidth * .95);
   var aboutHeight = Math.floor(aboutWidth * 0.5625);
-  var aboutHTML =
-  '<iframe ' +
-      'width="'+ aboutWidth +'"' +
-      'height="'+ aboutHeight +'"' +
-      'src="https://www.youtube.com/embed/65F0kikq-iY"' +
-      'frameborder="0"' +
-      'allow="autoplay; encrypted-media"' +
-      'allowfullscreen></iframe>';
+  var aboutHTML = '<iframe ' + 'width="' + aboutWidth + '"' + 'height="' + aboutHeight + '"' + 'src="https://www.youtube.com/embed/65F0kikq-iY"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.about-video').html(aboutHTML);
 };
 
