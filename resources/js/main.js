@@ -33,6 +33,18 @@ $(document).ready(function () {
 
   // size images and videos on window resize
   $(window).resize(function () {
+    if ($('.intro-video').width() <= 768) {
+      return;
+    };
+    console.log($('.intro-video').width());
+    sizeIntroVid();
+    sizeAboutVid();
+    sizeNAAInfo();
+    sizeInsuranceRow();
+  });
+
+
+  $(window).on("orientationchange", function(event) {
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
