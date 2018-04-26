@@ -24,7 +24,7 @@ $(document).ready(function () {
   });
 
   // size images and videos on document ready
-  if ($('.intro-video').html().length){
+  if ($('.intro-video').html().length <= 13){
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
@@ -33,8 +33,6 @@ $(document).ready(function () {
 
   // size images and videos on window resize
   $(window).resize(function () {
-    $('.intro-video').val('');
-    $('.about-video').val('');
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
@@ -60,11 +58,6 @@ $(document).ready(function () {
 
 // set the size of the YouTube video
 function sizeIntroVid() {
-  if ($('.intro-video').width() >= ($('.intro-column').width() * .9) &&
-      $('.intro-video').width() <= ($('.intro-column').width() * 1.1) &&
-      $('.intro-video').html().length > 13) {
-    return;
-  };
   $('.intro-video').val('');
   var introWidth = $('.intro-column').width();
   introWidth = Math.floor(introWidth * .95);
@@ -77,11 +70,6 @@ function sizeIntroVid() {
 
 // set the size of the YouTube video
 function sizeAboutVid() {
-  if ($('.about-video').width() >= ($('.about-column').width() * .9) &&
-      $('.about-video').width() <= ($('.about-column').width() * 1.1) &&
-      $('.about-video').html().length > 13) {
-    return;
-  };
   $('.about-video').val('');
   var aboutWidth = $('.about-column').width();
   aboutWidth = Math.floor(aboutWidth * .95);
