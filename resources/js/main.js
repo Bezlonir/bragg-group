@@ -24,16 +24,17 @@ $(document).ready(function () {
   });
 
   // size images and videos on document ready
-  $(document).addEventListener("DomContentLoaded", function(){
+  if ($(window).scrollTop() < 50){
+    console.log($(window).scrollTop());
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
     sizeInsuranceRow();
-
-  });
+  };
 
   // size images and videos on window resize
   $(window).resize(function () {
+    console.log($(window).scrollTop());
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
