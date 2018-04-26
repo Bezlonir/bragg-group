@@ -84,7 +84,7 @@ function sizeIntroVid() {
   var vidRatio = 2 / 3;
   // 0.6015625
   var introHeight = Math.floor(introWidth * 0.5625);
-  var introHTML = '<iframe ' + 'width="' + introWidth + '"' + 'height="' + introHeight + '"' + 'src="https://www.youtube.com/embed/MEX_SrCI4VA&origin=http://bragg-group.com"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
+  var introHTML = '<iframe ' + 'width="' + introWidth + '"' + 'height="' + introHeight + '"' + 'src="https://www.youtube.com/embed/MEX_SrCI4VA&&origin=https://bezlonir.github.io/bragg-group"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.intro-video').html(introHTML);
   $intro.data('width', $intro.width());
 };
@@ -95,7 +95,7 @@ function sizeAboutVid() {
   var aboutWidth = $('.about-column').width();
   aboutWidth = Math.floor(aboutWidth * .95);
   var aboutHeight = Math.floor(aboutWidth * 0.5625);
-  var aboutHTML = '<iframe ' + 'width="' + aboutWidth + '"' + 'height="' + aboutHeight + '"' + 'src="https://www.youtube.com/embed/65F0kikq-iY&origin=http://bragg-group.com"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
+  var aboutHTML = '<iframe ' + 'width="' + aboutWidth + '"' + 'height="' + aboutHeight + '"' + 'src="https://www.youtube.com/embed/65F0kikq-iY&origin=https://bezlonir.github.io/bragg-group"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.about-video').html(aboutHTML);
   $about.data('width', $about.width());
 };
