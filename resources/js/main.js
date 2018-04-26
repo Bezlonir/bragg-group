@@ -33,6 +33,8 @@ $(document).ready(function () {
 
   // size images and videos on window resize
   $(window).resize(function () {
+    $('.intro-video').val('');
+    $('.about-video').val('');
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
@@ -71,12 +73,10 @@ function sizeIntroVid() {
   var introHeight = Math.floor(introWidth * 0.5625);
   var introHTML = '<iframe ' + 'width="' + introWidth + '"' + 'height="' + introHeight + '"' + 'src="https://www.youtube.com/embed/MEX_SrCI4VA"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.intro-video').html(introHTML);
-  console.log($('.intro-video').html().length);
 };
 
 // set the size of the YouTube video
 function sizeAboutVid() {
-  console.log($('.about-video').html().length);
   if ($('.about-video').width() >= ($('.about-column').width() * .9) &&
       $('.about-video').width() <= ($('.about-column').width() * 1.1) &&
       $('.about-video').html().length > 13) {
