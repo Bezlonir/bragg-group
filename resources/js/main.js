@@ -24,7 +24,7 @@ $(document).ready(function () {
   });
 
   // size images and videos on document ready
-  if ($(window).scrollTop() < 50){
+  if ($('.intro-video').html().length){
     console.log($(window).scrollTop());
     sizeIntroVid();
     sizeAboutVid();
