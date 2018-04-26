@@ -25,7 +25,6 @@ $(document).ready(function () {
 
   // size images and videos on document ready
   if ($('.intro-video').html().length){
-    console.log($(window).scrollTop());
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
@@ -34,7 +33,6 @@ $(document).ready(function () {
 
   // size images and videos on window resize
   $(window).resize(function () {
-    console.log($(window).scrollTop());
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
@@ -60,6 +58,11 @@ $(document).ready(function () {
 
 // set the size of the YouTube video
 function sizeIntroVid() {
+  if ($('.intro-video').width() >= ($('.intro-column').width() * .9) &&
+      $('.intro-video').width() <= ($('.intro-column').width() * 1.1) &&
+      $('.intro-video').html().length > 13) {
+    return;
+  };
   $('.intro-video').val('');
   var introWidth = $('.intro-column').width();
   introWidth = Math.floor(introWidth * .95);
@@ -68,10 +71,17 @@ function sizeIntroVid() {
   var introHeight = Math.floor(introWidth * 0.5625);
   var introHTML = '<iframe ' + 'width="' + introWidth + '"' + 'height="' + introHeight + '"' + 'src="https://www.youtube.com/embed/MEX_SrCI4VA"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.intro-video').html(introHTML);
+  console.log($('.intro-video').html().length);
 };
 
 // set the size of the YouTube video
 function sizeAboutVid() {
+  console.log($('.about-video').html().length);
+  if ($('.about-video').width() >= ($('.about-column').width() * .9) &&
+      $('.about-video').width() <= ($('.about-column').width() * 1.1) &&
+      $('.about-video').html().length > 13) {
+    return;
+  };
   $('.about-video').val('');
   var aboutWidth = $('.about-column').width();
   aboutWidth = Math.floor(aboutWidth * .95);
