@@ -1,4 +1,7 @@
-'use strict';
+// 'use strict';
+
+var $intro = $('.intro-video');
+var $about = $('.about-video');
 
 $.fn.scrollView = function () {
   var navHeight = $("#bg-navbar").height();
@@ -31,12 +34,15 @@ $(document).ready(function () {
     sizeInsuranceRow();
   };
 
+
+
   // size images and videos on window resize
   $(window).resize(function () {
-    if ($('.intro-video').width() <= 768) {
+    if ($('.intro-video').width() <= ($intro.data('width') * 1.1) &&
+        $('.intro-video').width() >= ($intro.data('width') * 0.9)) {
       return;
     };
-    console.log($('.intro-video').width());
+
     sizeIntroVid();
     sizeAboutVid();
     sizeNAAInfo();
@@ -45,10 +51,12 @@ $(document).ready(function () {
 
 
   $(window).on("orientationchange", function(event) {
-    sizeIntroVid();
-    sizeAboutVid();
-    sizeNAAInfo();
-    sizeInsuranceRow();
+    window.setTimeout(function() {
+      sizeIntroVid();
+      sizeAboutVid();
+      sizeNAAInfo();
+      sizeInsuranceRow();
+    },200);
   });
 
   $('.bragg-nav').click(function () {
@@ -78,6 +86,7 @@ function sizeIntroVid() {
   var introHeight = Math.floor(introWidth * 0.5625);
   var introHTML = '<iframe ' + 'width="' + introWidth + '"' + 'height="' + introHeight + '"' + 'src="https://www.youtube.com/embed/MEX_SrCI4VA"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.intro-video').html(introHTML);
+  $intro.data('width', $intro.width());
 };
 
 // set the size of the YouTube video
@@ -88,6 +97,7 @@ function sizeAboutVid() {
   var aboutHeight = Math.floor(aboutWidth * 0.5625);
   var aboutHTML = '<iframe ' + 'width="' + aboutWidth + '"' + 'height="' + aboutHeight + '"' + 'src="https://www.youtube.com/embed/65F0kikq-iY"' + 'frameborder="0"' + 'allow="autoplay; encrypted-media"' + 'allowfullscreen></iframe>';
   $('.about-video').html(aboutHTML);
+  $about.data('width', $about.width());
 };
 
 // size the NAA leads info picture
