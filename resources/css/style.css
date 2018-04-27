@@ -445,9 +445,7 @@ h3 {
 
 /*only apply if you're serious styling*/
 #serious {
-  height:16rem;
-
-
+  min-height:16rem;
   background-color:rgba(99,99,104,.6);
   margin-top:8rem;
   border-top:solid 1px rgba(80,80,80,.3);
@@ -460,6 +458,8 @@ h3 {
 
 #serious span {
   width:80%;
+  margin-top:2rem;
+  margin-bottom:2rem;
   font-size:3rem;
   font-family:'Anton', sans-serif;
   font-weight:normal;
