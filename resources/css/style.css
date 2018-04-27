@@ -443,6 +443,36 @@ h3 {
   width:20%;
 }
 
+/*only apply if you're serious styling*/
+#serious {
+  height:16rem;
+
+
+  background-color:rgba(99,99,104,.6);
+  margin-top:8rem;
+  border-top:solid 1px rgba(80,80,80,.3);
+  border-bottom:solid 1px rgba(80,80,80,.3);
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#serious span {
+  width:80%;
+  font-size:3rem;
+  font-family:'Anton', sans-serif;
+  font-weight:normal;
+  color:rgba(255,252,252,1);
+  letter-spacing:.1rem;
+  text-shadow: 1px 1px rgb(36,40,40),
+              1px -1px rgb(36,40,40),
+              -1px 1px rgb(36,40,40),
+              -1px -1px rgb(36,40,40),
+              1px 1px 3px rgb(36,40,40);
+}
+
+
 /*footer styling*/
 footer {
   height:auto;
