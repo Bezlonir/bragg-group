@@ -472,9 +472,10 @@ h3 {
               1px 1px 3px rgb(36,40,40);
 }
 
+/*mobile styling for only apply if section*/
 @media only screen and (max-width:768px) {
   #serious span {
-    font-size:2rem;
+    font-size:2.2rem;
   }
 }
 /*footer styling*/
