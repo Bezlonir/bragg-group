@@ -472,7 +472,11 @@ h3 {
               1px 1px 3px rgb(36,40,40);
 }
 
-
+@media only screen and (max-width:768px) {
+  #serious span {
+    font-size:2rem;
+  }
+}
 /*footer styling*/
 footer {
   height:auto;
