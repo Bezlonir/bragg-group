@@ -18,7 +18,7 @@ $(document).ready(function () {
     accessibility: false,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 4000,
     draggable: false,
     pauseOnFocus: false,
     pauseOnHover: false,
